@@ -1,0 +1,54 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block index %}
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5">
+    <title>Table </title>
+    <link rel="stylesheet" href="{% static 'css/tab.css' %}">
+</head>
+
+<body>
+    <main class="table">
+        <section class="table__header">
+            <h1 >DASHBOARD</h1>
+
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Température <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Humidité <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Date <span class="icon-arrow">&UpArrow;</span></th>
+                        <th> Status <span class="icon-arrow">&UpArrow;</span></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> 1 </td>
+                        <td> {{valeurs.temp}} °C</td>
+                        <td> {{valeurs.hum}}  %</td>
+                        <td>{{valeurs.date}}</td>
+                        <td>
+                            <p class="status delivered">Normal</p>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+
+</html>
+{% endblock index %}
